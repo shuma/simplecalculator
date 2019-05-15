@@ -4,6 +4,8 @@ import "./App.css";
 import FlexGrid from "./components/FlexGrid";
 import Col from "./components/Col";
 import NumberFiled from "./components/NumberField";
+import RadioField from "./components/RadioField";
+import TotalField from "./components/TotalField";
 
 const App = () => {
   const [values, setValues] = useState({ value1: 0, value2: 0, value3: 0 });
@@ -69,31 +71,17 @@ const App = () => {
         </Col>
         <Col primary>
           <ul>
-            <li>
-              <label>
-                <input
-                  type="radio"
-                  value="Sum"
-                  checked={selectedOption === "Sum"}
-                  onChange={radioChange}
-                />
-                Sum
-              </label>
-            </li>
-            <li>
-              <label>
-                <input
-                  type="radio"
-                  value="Multiply"
-                  checked={selectedOption === "Multiply"}
-                  onChange={radioChange}
-                />
-                Multiply
-              </label>
-            </li>
-            <li>
-              <span>Resultat: {total}</span>
-            </li>
+            <RadioField
+              valueName="Sum"
+              selectedOption={selectedOption}
+              radioChange={radioChange}
+            />
+            <RadioField
+              valueName="Multiply"
+              selectedOption={selectedOption}
+              radioChange={radioChange}
+            />
+            <TotalField total={total} />
           </ul>
         </Col>
       </FlexGrid>
