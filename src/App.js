@@ -30,24 +30,6 @@ const App = () => {
       1
     );
 
-  // const sum = useCallback(() => {
-  //   const { value1, value2, value3 } = values;
-  //   setTotal(
-  //     (parseInt(value1) || 0) +
-  //       (parseInt(value2) || 0) +
-  //       (parseInt(value3) || 0)
-  //   );
-  // });
-
-  // const multiply = useCallback(() => {
-  //   const { value1, value2, value3 } = values;
-  //   setTotal(
-  //     (parseInt(value1) || 0) *
-  //       (parseInt(value2) || 0) *
-  //       (parseInt(value3) || 0)
-  //   );
-  // });
-
   useEffect(() => {
     if (selectedOption === "Sum") {
       setTotal(sum(Object.values(values)));
