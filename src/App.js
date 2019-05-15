@@ -3,6 +3,7 @@ import "./App.css";
 
 import FlexGrid from "./components/FlexGrid";
 import Col from "./components/Col";
+import NumberFiled from "./components/NumberField";
 
 const App = () => {
   const [values, setValues] = useState({ value1: 0, value2: 0, value3: 0 });
@@ -43,30 +44,27 @@ const App = () => {
       <header className="App-header">Simple Calculator</header>
       <FlexGrid>
         <Col>
-          <label htmlFor="value1">Value1</label>
-          <input
-            type="number"
-            name="value1"
+          <NumberFiled
+            labelName="Value 1"
+            valueName="value1"
             value={values.value1}
-            onChange={handleChange}
+            handleChange={handleChange}
           />
         </Col>
         <Col>
-          <label htmlFor="value1">Value2</label>
-          <input
-            type="number"
-            name="value2"
+          <NumberFiled
+            labelName="Value 2"
+            valueName="value2"
             value={values.value2}
-            onChange={handleChange}
+            handleChange={handleChange}
           />
         </Col>
         <Col>
-          <label htmlFor="value1">Value3</label>
-          <input
-            type="number"
-            name="value3"
+          <NumberFiled
+            labelName="Value 3"
+            valueName="value3"
             value={values.value3}
-            onChange={handleChange}
+            handleChange={handleChange}
           />
         </Col>
         <Col primary>
